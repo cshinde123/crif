@@ -32,7 +32,7 @@ public class CRIFData {
 
     public static DownloadService localService;
     public static boolean isBound = false;
-    public static String HOME_URL = "http://18.191.145.152/api/";
+    public static String HOME_URL = "http://192.168.43.147/api/";
     public static String EMAIL_URL = "Emailtbs/PostEmailtb";
     public static Context contextService;
     public static String mobileNo, time;
