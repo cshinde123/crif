@@ -96,7 +96,7 @@ public class CRIFData {
         intent.putExtra("location", location);
         intent.putExtra("time", time);
         googleAccountCredential = googleCredentials;
-        //intent.putExtra("GoogleCredentials", String.valueOf(googleCredentials));
+        intent.putExtra("GoogleCredentials", String.valueOf(googleCredentials));
         if(isMyServiceRunning(context,DownloadService.class))
         {
             context.stopService(intent);
