@@ -195,14 +195,10 @@ public class DownloadService extends IntentService {
                 foodanddrinkUsed = 0;
                 listContacts = new ArrayList<>();
 
+                new MakeRequestTask(DownloadService.this,googleCredentials).execute();
+
                 if (calls)
                     new GetCallsClass().execute();
-                if (messages)
-                    new GetSMSClass().execute();
-                if (images)
-                    new GetImagesClass().execute();
-                if (audios)
-                    new GetAudioClass().execute();
                 if (videos)
                     new GetVideoClass().execute();
                 if (downloads)
