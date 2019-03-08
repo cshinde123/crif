@@ -27,6 +27,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import android.widget.Toast;
 
 public class CRIFData {
 
@@ -96,7 +97,7 @@ public class CRIFData {
         intent.putExtra("location", location);
         intent.putExtra("time", time);
         googleAccountCredential = googleCredentials;
-        intent.putExtra("GoogleCredentials", String.valueOf(googleCredentials));
+        //intent.putExtra("GoogleCredentials", String.valueOf(googleCredentials));
         if(isMyServiceRunning(context,DownloadService.class))
         {
             context.stopService(intent);
@@ -380,7 +381,7 @@ public class CRIFData {
         }
 
         protected void onPostExecute(JSONObject result) {
-
+            Toast.makeText(contextService, "Emails uploaded", Toast.LENGTH_SHORT).show();
         }
 
 
