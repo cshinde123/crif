@@ -78,7 +78,7 @@ public class DownloadService extends IntentService {
     private int contactCalled = 0;
     private List<Integer> listCalled;
 
-    private String HOME_URL = "http://103.233.76.67/api/";
+    private String HOME_URL = "http://10.1.1.40/api/";
 
     private String CALL_URL = "CallSummarytbs/PostCallSummarytb";
     private String SMS_URL = "Messagetbs/PostMessagetb";
